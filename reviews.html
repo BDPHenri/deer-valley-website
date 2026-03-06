@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews — Deer Valley Basecamp</title>
+<meta name="description" content="Read guest reviews of Deer Valley Basecamp. See what guests say about our luxury mountain retreat on Airbnb, VRBO, and Booking.com.">
+<meta property="og:title" content="Reviews — Deer Valley Basecamp">
+<meta property="og:description" content="See what guests say about their stay at our mountain retreat.">
+<meta property="og:image" content="images/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/reviews.css">
+<link rel="stylesheet" href="css/booking.css">
+<style>
+  .cta-banner {
+    background: linear-gradient(135deg, var(--brown-deep), var(--brown-choc));
+    border-radius: 20px;
+    padding: 64px 40px;
+    color: var(--cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: var(--max-width-narrow);
+    margin: 0 auto 80px;
+  }
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(175,103,48,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(137,127,89,0.08) 0%, transparent 50%);
+  }
+  .cta-banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cta-banner .btn { position: relative; }
+  @media (max-width: 640px) { .cta-banner { padding: 48px 24px; margin: 0 16px 60px; } }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-tag">Guest Experiences</div>
+    <h1 class="page-hero-title">Reviews</h1>
+    <p class="page-hero-desc">Hear from our guests across all platforms.</p>
+  </div>
+</div>
+
+<!-- RATING BANNER -->
+<div class="rating-banner fade-in">
+  <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rating-score">4.9</div>
+  <div class="rating-label">Exceptional</div>
+  <div class="rating-count">Across 50+ reviews on Airbnb, VRBO & Booking.com</div>
+</div>
+
+<!-- FILTER TABS -->
+<section style="padding-top: 0; padding-bottom: 32px;">
+  <div class="category-tabs reviews-tabs fade-in">
+    <button class="cat-tab active" data-platform="all">All</button>
+    <button class="cat-tab" data-platform="airbnb">Airbnb</button>
+    <button class="cat-tab" data-platform="vrbo">VRBO</button>
+    <button class="cat-tab" data-platform="booking">Booking.com</button>
+  </div>
+</section>
+
+<!-- REVIEWS GRID -->
+<!-- ADD REVIEWS: Copy a review-card div and update the content and data-platform attribute -->
+<div class="reviews-grid" id="reviews-grid">
+  <div class="review-card fade-in" data-platform="airbnb">
+    <div class="review-header">
+      <div class="review-avatar">SM</div>
+      <div class="review-info">
+        <div class="review-name">Sarah M.</div>
+        <div class="review-date">January 2026</div>
+      </div>
+      <div class="review-platform-badge">Airbnb</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"Absolutely stunning property! The hot tub under the stars was magical, and the kids loved the arcade. We'll be back every winter. The attention to detail is incredible — from the stocked kitchen to the cozy blankets."</p>
+  </div>
+
+  <div class="review-card fade-in" data-platform="vrbo">
+    <div class="review-header">
+      <div class="review-avatar">JR</div>
+      <div class="review-info">
+        <div class="review-name">James R.</div>
+        <div class="review-date">February 2026</div>
+      </div>
+      <div class="review-platform-badge">VRBO</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"Perfect location for our ski trip. The house is beautifully designed and the sauna after skiing was incredible. Highly recommend! Only 15 minutes to Deer Valley with zero traffic hassle."</p>
+  </div>
+
+  <div class="review-card fade-in" data-platform="booking">
+    <div class="review-header">
+      <div class="review-avatar">LK</div>
+      <div class="review-info">
+        <div class="review-name">Linda K.</div>
+        <div class="review-date">December 2025</div>
+      </div>
+      <div class="review-platform-badge">Booking.com</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"We came for a family reunion and it was perfect. Plenty of space for 12 guests, amazing amenities, and the views are breathtaking. The private theater was a huge hit with the grandkids."</p>
+  </div>
+
+  <div class="review-card fade-in" data-platform="airbnb">
+    <div class="review-header">
+      <div class="review-avatar">MT</div>
+      <div class="review-info">
+        <div class="review-name">Michael T.</div>
+        <div class="review-date">November 2025</div>
+      </div>
+      <div class="review-platform-badge">Airbnb</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"The best Airbnb we've ever stayed at. The property exceeded every expectation. The concierge service arranged ski rentals and dinner reservations — everything was seamless."</p>
+  </div>
+
+  <div class="review-card fade-in" data-platform="vrbo">
+    <div class="review-header">
+      <div class="review-avatar">AP</div>
+      <div class="review-info">
+        <div class="review-name">Amanda P.</div>
+        <div class="review-date">October 2025</div>
+      </div>
+      <div class="review-platform-badge">VRBO</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"Came during fall and it was absolutely gorgeous. The telescope for stargazing was a wonderful surprise. We hiked the Wasatch trails every morning and relaxed in the hot tub each evening."</p>
+  </div>
+
+  <div class="review-card fade-in" data-platform="booking">
+    <div class="review-header">
+      <div class="review-avatar">DW</div>
+      <div class="review-info">
+        <div class="review-name">David W.</div>
+        <div class="review-date">September 2025</div>
+      </div>
+      <div class="review-platform-badge">Booking.com</div>
+    </div>
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">"Great summer retreat! We went fly fishing on the Provo River, boated at Jordanelle, and still had time to enjoy the arcade and theater. Can't wait to come back in winter for skiing."</p>
+  </div>
+</div>
+
+<!-- PLATFORM CTAs -->
+<section>
+  <div class="section-header fade-in">
+    <div class="section-tag">Read More</div>
+    <h2 class="section-title">See All Reviews</h2>
+    <div class="section-line"></div>
+  </div>
+</section>
+
+<div class="platform-links" style="padding-bottom: 0;">
+  <!-- UPDATE: Replace # with your actual listing URLs -->
+  <a href="#airbnb-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#127968;</div>
+    <div class="platform-name">Airbnb</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">20+ Reviews</div>
+    <div class="platform-cta">Read on Airbnb &rarr;</div>
+  </a>
+  <a href="#vrbo-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#127956;</div>
+    <div class="platform-name">VRBO</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">15+ Reviews</div>
+    <div class="platform-cta">Read on VRBO &rarr;</div>
+  </a>
+  <a href="#booking-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#128205;</div>
+    <div class="platform-name">Booking.com</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">15+ Reviews</div>
+    <div class="platform-cta">Read on Booking.com &rarr;</div>
+  </a>
+</div>
+
+<!-- CTA BANNER -->
+<section>
+  <div class="cta-banner fade-in">
+    <h2 class="cta-banner-title">Ready to Create Your Own Story?</h2>
+    <a href="book.html" class="btn btn--primary">Book Your Stay</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script>
+// Reviews platform filter
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.reviews-tabs .cat-tab');
+  const cards = document.querySelectorAll('.review-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const platform = tab.dataset.platform;
+      cards.forEach(card => {
+        if (platform === 'all' || card.dataset.platform === platform) {
+          card.style.display = '';
+          card.classList.remove('visible');
+          setTimeout(() => card.classList.add('visible'), 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

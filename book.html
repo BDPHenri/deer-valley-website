@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Stay — Deer Valley Basecamp</title>
+<meta name="description" content="Book your stay at Deer Valley Basecamp. Check availability and reserve your luxury mountain retreat in Heber City, Utah.">
+<meta property="og:title" content="Book Your Stay — Deer Valley Basecamp">
+<meta property="og:description" content="Check availability and book your mountain escape directly.">
+<meta property="og:image" content="images/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-tag">Reserve</div>
+    <h1 class="page-hero-title">Book Your Stay</h1>
+    <p class="page-hero-desc">Reserve your mountain escape at Deer Valley Basecamp.</p>
+  </div>
+</div>
+
+<!-- BOOKING WIDGET -->
+<div class="booking-widget-section fade-in">
+  <div class="section-header">
+    <div class="section-tag">Direct Booking</div>
+    <h2 class="section-title">Check Availability</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Select your dates below to check availability and book directly for the best rates.</p>
+  </div>
+  <div class="booking-widget-container">
+    <!-- HOSPITABLE WIDGET: Replace the URL below with your Hospitable widget URL -->
+    <iframe
+      id="booking-iframe"
+      src="about:blank"
+      data-src="HOSPITABLE_WIDGET_URL_PLACEHOLDER"
+      style="width: 100%; min-width: 320px; min-height: 900px; border: none;"
+      title="Book Deer Valley Basecamp"
+      loading="lazy"
+    ></iframe>
+    <div class="booking-widget-fallback">
+      <p>Widget loading... If it doesn't appear, <a href="#contact-form">use the contact form below</a> or book on
+        <a href="#airbnb-listing" target="_blank" rel="noopener">Airbnb</a> |
+        <a href="#vrbo-listing" target="_blank" rel="noopener">VRBO</a> |
+        <a href="#booking-listing" target="_blank" rel="noopener">Booking.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORM LINKS -->
+<section style="padding-top: 0;">
+  <div class="section-header fade-in">
+    <div class="section-tag">Also Available On</div>
+    <h2 class="section-title">Book on Your Favorite Platform</h2>
+    <div class="section-line"></div>
+  </div>
+</section>
+
+<div class="platform-links">
+  <!-- UPDATE: Replace # with your actual listing URLs -->
+  <a href="#airbnb-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#127968;</div>
+    <div class="platform-name">Airbnb</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">Superhost</div>
+    <div class="platform-cta">View Listing &rarr;</div>
+  </a>
+  <a href="#vrbo-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#127956;</div>
+    <div class="platform-name">VRBO</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">Premier Host</div>
+    <div class="platform-cta">View Listing &rarr;</div>
+  </a>
+  <a href="#booking-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+    <div class="platform-icon">&#128205;</div>
+    <div class="platform-name">Booking.com</div>
+    <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="platform-count">Exceptional</div>
+    <div class="platform-cta">View Listing &rarr;</div>
+  </a>
+</div>
+
+<!-- CONTACT FORM -->
+<div class="contact-form-section" id="contact-form">
+  <div class="section-header fade-in">
+    <div class="section-tag">Direct Contact</div>
+    <h2 class="section-title">Prefer to Reach Out?</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Have questions or want to discuss a custom stay? We'd love to hear from you.</p>
+  </div>
+
+  <!-- UPDATE: Replace FORM_ID_PLACEHOLDER with your Formspree form ID -->
+  <form id="booking-form" class="contact-form fade-in" action="https://formspree.io/f/FORM_ID_PLACEHOLDER" method="POST">
+    <div class="form-error"></div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name</label>
+        <input class="form-input" type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone</label>
+        <input class="form-input" type="tel" id="phone" name="phone" placeholder="(Optional)">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="guests">Number of Guests</label>
+        <input class="form-input" type="number" id="guests" name="guests" min="1" max="14" placeholder="1-14">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="checkin">Check-in Date</label>
+        <input class="form-input" type="date" id="checkin" name="checkin">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="checkout">Check-out Date</label>
+        <input class="form-input" type="date" id="checkout" name="checkout">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-textarea" id="message" name="message" required placeholder="Tell us about your trip plans..."></textarea>
+    </div>
+
+    <!-- Honeypot for spam prevention -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div style="text-align: center; margin-top: 8px;">
+      <button type="submit" class="btn btn--primary" style="width: 100%; max-width: 300px;">Send Inquiry</button>
+    </div>
+
+    <div class="form-success">
+      <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <h3>Thank You!</h3>
+      <p>We've received your inquiry and will get back to you within 24 hours. We can't wait to host you at Deer Valley Basecamp.</p>
+    </div>
+  </form>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/booking.js" defer></script>
+</body>
+</html>

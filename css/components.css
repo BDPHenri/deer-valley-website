@@ -1,0 +1,166 @@
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--copper);
+  color: var(--cream);
+}
+
+.btn--primary:hover {
+  background: var(--caramel);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(175,103,48,0.25);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(245,240,232,0.3);
+}
+
+.btn--outline:hover {
+  background: rgba(245,240,232,0.1);
+  border-color: rgba(245,240,232,0.5);
+}
+
+.btn--dark-outline {
+  background: transparent;
+  color: var(--brown-deep);
+  border: 1px solid rgba(137,127,89,0.3);
+}
+
+.btn--dark-outline:hover {
+  background: var(--brown-deep);
+  color: var(--cream);
+  border-color: var(--brown-deep);
+}
+
+/* ========== CARDS ========== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid rgba(137,127,89,0.08);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ========== CATEGORY TABS ========== */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.cat-tab {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(137,127,89,0.2);
+  background: transparent;
+  color: var(--brown-med);
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cat-tab:hover, .cat-tab.active {
+  background: var(--brown-deep);
+  color: var(--cream);
+  border-color: var(--brown-deep);
+}
+
+/* ========== CHIPS ========== */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(245,240,232,0.08);
+  border: 1px solid rgba(245,240,232,0.12);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  color: var(--cream-warm);
+  backdrop-filter: blur(4px);
+}
+
+.chip svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--copper);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* ========== FORM ELEMENTS ========== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--brown-deep);
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  background: var(--cream-light);
+  border: 1px solid rgba(137,127,89,0.15);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--copper);
+  box-shadow: 0 0 0 3px rgba(175,103,48,0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+}

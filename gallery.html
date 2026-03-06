@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Deer Valley Basecamp</title>
+<meta name="description" content="Explore every corner of Deer Valley Basecamp. Photo gallery of our luxury mountain retreat in Heber City, Utah.">
+<meta property="og:title" content="Gallery — Deer Valley Basecamp">
+<meta property="og:description" content="Explore every corner of our luxury mountain retreat.">
+<meta property="og:image" content="images/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-tag">The Property</div>
+    <h1 class="page-hero-title">Gallery</h1>
+    <p class="page-hero-desc">Explore every corner of your mountain retreat.</p>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<section style="padding-bottom: 0;">
+  <div class="category-tabs gallery-tabs fade-in">
+    <button class="cat-tab active" data-category="all">All</button>
+    <button class="cat-tab" data-category="exterior">Exterior</button>
+    <button class="cat-tab" data-category="living">Living Spaces</button>
+    <button class="cat-tab" data-category="bedrooms">Bedrooms</button>
+    <button class="cat-tab" data-category="kitchen">Kitchen</button>
+    <button class="cat-tab" data-category="entertainment">Entertainment</button>
+    <button class="cat-tab" data-category="views">Views</button>
+  </div>
+</section>
+
+<!-- PHOTO GRID -->
+<!-- ADD NEW PHOTOS: Copy a gallery-item div and update src, alt, and data-category -->
+<div class="gallery-grid">
+  <div class="gallery-item gallery-item--wide fade-in" data-category="exterior">
+    <img src="images/hero.jpg" alt="Deer Valley Basecamp exterior with mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Mountain retreat exterior</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="views">
+    <img src="images/photo-break.jpg" alt="Mountain views from the property" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Stunning mountain panorama</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/hero.jpg" alt="Living room" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Spacious living area</span></div>
+  </div>
+  <div class="gallery-item gallery-item--tall fade-in" data-category="exterior">
+    <img src="images/photo-break.jpg" alt="Property entrance" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Welcome to Basecamp</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="entertainment">
+    <img src="images/hero.jpg" alt="Entertainment area" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Arcade & games room</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="views">
+    <img src="images/photo-break.jpg" alt="Deck views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Views from the deck</span></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+  <img class="lightbox-image" id="lightbox-image" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<!-- CTA -->
+<section style="text-align: center;">
+  <div class="fade-in">
+    <p class="section-desc" style="margin-bottom: 24px;">Love what you see? Book your mountain escape today.</p>
+    <a href="book.html" class="btn btn--primary">Book Your Stay</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/gallery.js" defer></script>
+</body>
+</html>

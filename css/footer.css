@@ -1,0 +1,152 @@
+/* ========== FOOTER ========== */
+.site-footer {
+  background: var(--brown-deep);
+  color: var(--cream);
+  padding: 80px 24px 40px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column */
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-brand-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--cream-warm);
+  opacity: 0.6;
+}
+
+/* Footer columns */
+.footer-col-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--cream-warm);
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* Platform badges */
+.footer-platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(245,240,232,0.06);
+  border: 1px solid rgba(245,240,232,0.08);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--cream-warm);
+  opacity: 0.7;
+  transition: var(--transition-base);
+  text-decoration: none;
+}
+
+.footer-platform-badge:hover {
+  opacity: 1;
+  background: rgba(245,240,232,0.1);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245,240,232,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: var(--cream-warm);
+  opacity: 0.4;
+}
+
+.footer-social {
+  font-size: 12px;
+  color: var(--cream-warm);
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .site-footer {
+    padding: 60px 20px 32px;
+  }
+}

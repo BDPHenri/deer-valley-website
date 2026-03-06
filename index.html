@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deer Valley Basecamp — Luxury Mountain Retreat</title>
+<meta name="description" content="Luxury mountain retreat in Heber City, Utah. 5 bedrooms, hot tub, sauna, private theater, and arcade — minutes from Deer Valley and Park City skiing.">
+<meta property="og:title" content="Deer Valley Basecamp — Luxury Mountain Retreat">
+<meta property="og:description" content="Your luxury mountain escape in Heber City, Utah. Book direct for the best rates.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  /* Home-specific styles */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .highlight-card {
+    background: white;
+    border-radius: 14px;
+    padding: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border: 1px solid rgba(137,127,89,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .highlight-card:hover {
+    box-shadow: 0 8px 32px rgba(56,49,35,0.08);
+    transform: translateY(-2px);
+  }
+
+  .highlight-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .highlight-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--copper);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .highlight-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--brown-deep);
+    margin-bottom: 6px;
+  }
+
+  .highlight-desc {
+    font-size: 13px;
+    color: var(--brown-med);
+    line-height: 1.6;
+  }
+
+  /* Photo break */
+  .photo-break {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .photo-break img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photo-break-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42,31,20,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-break-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 300;
+    color: var(--cream);
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 0 24px;
+  }
+
+  /* Testimonial preview */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(137,127,89,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: 0 8px 32px rgba(56,49,35,0.08);
+  }
+
+  .testimonial-stars {
+    color: var(--copper);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    color: var(--brown-med);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-author {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .testimonial-platform {
+    font-size: 11px;
+    color: var(--brown-med);
+    margin-top: 2px;
+  }
+
+  /* Location grid */
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .location-card {
+    text-align: center;
+    padding: 28px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(137,127,89,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .location-card:hover {
+    box-shadow: 0 4px 20px rgba(56,49,35,0.06);
+  }
+
+  .location-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--copper);
+    margin-bottom: 4px;
+  }
+
+  .location-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .location-sub {
+    font-size: 11px;
+    color: var(--brown-med);
+    margin-top: 2px;
+  }
+
+  /* CTA banner */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--brown-deep), var(--brown-choc));
+    border-radius: 20px;
+    padding: 64px 40px;
+    color: var(--cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: var(--max-width-narrow);
+    margin: 0 auto 80px;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(175,103,48,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(137,127,89,0.08) 0%, transparent 50%);
+  }
+
+  .cta-banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .cta-banner .btn {
+    position: relative;
+  }
+
+  @media (max-width: 640px) {
+    .highlights-grid { grid-template-columns: 1fr; }
+    .photo-break { height: 280px; }
+    .cta-banner { padding: 48px 24px; margin: 0 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg" style="background-image: url('images/hero.jpg')"></div>
+  <div class="hero-content">
+    <div class="hero-icon">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+    <div class="hero-label">Luxury Mountain Retreat</div>
+    <h1 class="hero-title">Deer Valley<br>Basecamp</h1>
+    <p class="hero-sub">Heber City, Utah — Where mountain luxury meets adventure.<br>Your private retreat minutes from world-class skiing.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">5</div>
+        <div class="hero-stat-label">Bedrooms</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">3.5</div>
+        <div class="hero-stat-label">Bathrooms</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">14</div>
+        <div class="hero-stat-label">Guests</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">8 min</div>
+        <div class="hero-stat-label">To Ski</div>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="book.html" class="btn btn--primary">Book Your Stay</a>
+      <a href="gallery.html" class="btn btn--outline">Explore the Property</a>
+    </div>
+  </div>
+  <div class="mountain-silhouette">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+      <path d="M0,400 L0,300 Q120,200 240,280 Q360,180 480,260 Q560,200 640,240 Q720,160 800,220 Q900,140 1000,200 Q1100,160 1200,220 Q1300,180 1440,250 L1440,400 Z" fill="var(--cream-light)" opacity="0.4"/>
+      <path d="M0,400 L0,320 Q180,240 360,300 Q480,240 600,280 Q720,220 840,260 Q960,200 1080,250 Q1200,220 1440,280 L1440,400 Z" fill="var(--cream-light)" opacity="0.6"/>
+      <path d="M0,400 L0,340 Q240,280 480,320 Q600,280 720,310 Q840,260 960,290 Q1080,260 1200,300 Q1320,280 1440,310 L1440,400 Z" fill="var(--cream-light)"/>
+    </svg>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</div>
+
+<!-- PROPERTY HIGHLIGHTS -->
+<section>
+  <div class="section-header fade-in">
+    <div class="section-tag">Your Mountain Retreat</div>
+    <h2 class="section-title">Amenities & Experiences</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Every detail crafted for the perfect mountain getaway.</p>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Hot Tub & Sauna</div>
+        <div class="highlight-desc">Relax under the stars in your private hot tub or unwind in the infrared barrel sauna after a day on the slopes.</div>
+      </div>
+    </div>
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Private Theater</div>
+        <div class="highlight-desc">80" screen with surround sound, theater-style popcorn machine, and a curated vinyl record collection.</div>
+      </div>
+    </div>
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Arcade & Games</div>
+        <div class="highlight-desc">Four-player multi-arcade with 1400+ games, ping pong table, and endless entertainment for all ages.</div>
+      </div>
+    </div>
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Ski-Ready</div>
+        <div class="highlight-desc">Heated boot dryers, equipment storage, and just 8 minutes to Deer Valley Resort with ski-in convenience.</div>
+      </div>
+    </div>
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Stargazing</div>
+        <div class="highlight-desc">Celestron telescope for incredible stargazing from the deck — Heber Valley's dark skies are a hidden gem.</div>
+      </div>
+    </div>
+    <div class="highlight-card fade-in">
+      <div class="highlight-icon">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div>
+        <div class="highlight-name">Concierge Services</div>
+        <div class="highlight-desc">Private chef, grocery stocking, ski valet, transportation, and custom itineraries through Mountain Time Utah.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK -->
+<div class="photo-break fade-in">
+  <img src="images/photo-break.jpg" alt="Mountain views from Deer Valley Basecamp" loading="lazy">
+  <div class="photo-break-overlay">
+    <div class="photo-break-text">Where Every Season Tells a Story</div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS PREVIEW -->
+<section>
+  <div class="section-header fade-in">
+    <div class="section-tag">Guest Experiences</div>
+    <h2 class="section-title">What Our Guests Say</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Absolutely stunning property! The hot tub under the stars was magical, and the kids loved the arcade. We'll be back every winter."</p>
+      <div class="testimonial-author">Sarah M.</div>
+      <div class="testimonial-platform">Airbnb · January 2026</div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Perfect location for our ski trip. The house is beautifully designed and the sauna after skiing was incredible. Highly recommend!"</p>
+      <div class="testimonial-author">James R.</div>
+      <div class="testimonial-platform">VRBO · February 2026</div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"We came for a family reunion and it was perfect. Plenty of space, amazing amenities, and the views are breathtaking. 10/10."</p>
+      <div class="testimonial-author">Linda K.</div>
+      <div class="testimonial-platform">Booking.com · December 2025</div>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 40px;" class="fade-in">
+    <a href="reviews.html" class="btn btn--dark-outline">Read All Reviews</a>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section>
+  <div class="section-header fade-in">
+    <div class="section-tag">Prime Location</div>
+    <h2 class="section-title">Minutes from Everything</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Nestled in Heber City with easy access to world-class skiing, dining, and outdoor adventures.</p>
+  </div>
+  <div class="location-grid">
+    <div class="location-card fade-in">
+      <div class="location-time">8 min</div>
+      <div class="location-name">Deer Valley Resort</div>
+      <div class="location-sub">World-class skiing</div>
+    </div>
+    <div class="location-card fade-in">
+      <div class="location-time">20 min</div>
+      <div class="location-name">Park City</div>
+      <div class="location-sub">Largest US ski resort</div>
+    </div>
+    <div class="location-card fade-in">
+      <div class="location-time">55 min</div>
+      <div class="location-name">SLC Airport</div>
+      <div class="location-sub">Easy access</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div style="padding: 0 24px;">
+  <div class="cta-banner fade-in">
+    <h2 class="cta-banner-title">Ready to Experience Deer Valley Basecamp?</h2>
+    <a href="book.html" class="btn btn--primary">Book Your Stay</a>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js" defer></script>
+<script src="js/animations.js" defer></script>
+</body>
+</html>

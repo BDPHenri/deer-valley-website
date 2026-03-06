@@ -1,0 +1,171 @@
+/* ========== BOOKING WIDGET ========== */
+.booking-widget-section {
+  padding: 80px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-widget-container {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(137,127,89,0.1);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.booking-widget-container iframe {
+  width: 100%;
+  min-width: 320px;
+  min-height: 900px;
+  border: none;
+  display: block;
+}
+
+.booking-widget-fallback {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: var(--brown-med);
+  background: var(--cream);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+.booking-widget-fallback a {
+  color: var(--copper);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(175,103,48,0.3);
+}
+
+/* ========== PLATFORM LINKS ========== */
+.platform-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.platform-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  border: 1px solid rgba(137,127,89,0.08);
+  transition: var(--transition-base);
+  text-decoration: none;
+  display: block;
+}
+
+.platform-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.platform-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.platform-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--brown-deep);
+  margin-bottom: 8px;
+}
+
+.platform-rating {
+  font-size: 14px;
+  color: var(--copper);
+  margin-bottom: 4px;
+}
+
+.platform-count {
+  font-size: 12px;
+  color: var(--brown-med);
+  margin-bottom: 20px;
+}
+
+.platform-cta {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--copper);
+  border-bottom: 1px solid rgba(175,103,48,0.3);
+  padding-bottom: 2px;
+}
+
+/* ========== CONTACT FORM ========== */
+.contact-form-section {
+  padding: 0 24px 80px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  border: 1px solid rgba(137,127,89,0.08);
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 60px 24px;
+}
+
+.form-success.active {
+  display: block;
+}
+
+.form-success svg {
+  width: 64px;
+  height: 64px;
+  stroke: var(--copper);
+  fill: none;
+  stroke-width: 1.5;
+  margin-bottom: 24px;
+}
+
+.form-success h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--brown-deep);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  font-size: 14px;
+  color: var(--brown-med);
+  line-height: 1.7;
+}
+
+.form-error {
+  display: none;
+  padding: 14px 20px;
+  background: rgba(153,99,89,0.08);
+  border: 1px solid rgba(153,99,89,0.15);
+  border-radius: var(--radius-md);
+  color: var(--terra);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.form-error.active {
+  display: block;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .platform-links {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .contact-form {
+    padding: 32px 24px;
+  }
+}

@@ -18,20 +18,20 @@
 <link rel="stylesheet" href="css/hero.css">
 <link rel="stylesheet" href="css/animations.css">
 <style>
-  /* Home-specific styles */
+  /* Home-specific styles — matching guide baseline */
   .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
   }
 
   .highlight-card {
     background: white;
-    border-radius: 14px;
-    padding: 32px;
+    border-radius: 12px;
+    padding: 24px;
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
     border: 1px solid rgba(137,127,89,0.08);
     transition: all 0.3s ease;
   }
@@ -42,9 +42,9 @@
   }
 
   .highlight-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
     background: var(--cream);
     display: flex;
     align-items: center;
@@ -53,25 +53,24 @@
   }
 
   .highlight-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     stroke: var(--copper);
     fill: none;
     stroke-width: 1.5;
   }
 
   .highlight-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
-    color: var(--brown-deep);
-    margin-bottom: 6px;
+    color: var(--dark);
+    margin-bottom: 4px;
   }
 
   .highlight-desc {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--brown-med);
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   /* Photo break */
@@ -244,30 +243,29 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-bg" style="background-image: url('images/hero.jpg')"></div>
   <div class="hero-content">
-    <div class="hero-icon">
-      <img src="images/logo.png" alt="Logo">
+    <div class="hero-logo">
+      <img src="images/logo.png" alt="Deer Valley Basecamp">
     </div>
     <div class="hero-label">Luxury Mountain Retreat</div>
     <h1 class="hero-title">Deer Valley<br>Basecamp</h1>
-    <p class="hero-sub">Heber City, Utah — Where mountain luxury meets adventure.<br>Your private retreat minutes from world-class skiing.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-value">5</div>
-        <div class="hero-stat-label">Bedrooms</div>
+    <p class="hero-sub">Heber City, Utah · Mountain Views · Hot Tub<br>Sauna · Arcade · 8 Min to Ski</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Bedrooms</div>
+        <div class="hero-meta-value">5</div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">3.5</div>
-        <div class="hero-stat-label">Bathrooms</div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Bathrooms</div>
+        <div class="hero-meta-value">3.5</div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">14</div>
-        <div class="hero-stat-label">Guests</div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Guests</div>
+        <div class="hero-meta-value">14</div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">8 min</div>
-        <div class="hero-stat-label">To Ski</div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">To Ski</div>
+        <div class="hero-meta-value">8 min</div>
       </div>
     </div>
     <div class="hero-ctas">

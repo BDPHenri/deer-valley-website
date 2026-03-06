@@ -68,9 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-brand">
+            <div class="footer-logo-img">
+              <img src="images/logo.png" alt="Deer Valley Basecamp">
+            </div>
             <div class="footer-logo">Deer Valley Basecamp</div>
-            <div class="footer-tagline">Heber City, Utah</div>
-            <p class="footer-brand-desc">A luxury mountain retreat featuring hot tub, sauna, private theater, and arcade — minutes from world-class skiing at Deer Valley and Park City.</p>
+            <div class="footer-tagline">Heber City, Utah · Mountain Retreat</div>
+            <div class="footer-social-link">
+              <a href="https://instagram.com/deervalleybasecamp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                <span>@deervalleybasecamp</span>
+              </a>
+            </div>
           </div>
           <div>
             <div class="footer-col-title">Navigate</div>
@@ -100,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="footer-bottom">
           <div class="footer-copyright">&copy; ${new Date().getFullYear()} Deer Valley Basecamp. All rights reserved.</div>
-          <div class="footer-social">@deervalleybasecamp</div>
         </div>
       </footer>
     `;

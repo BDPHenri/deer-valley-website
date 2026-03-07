@@ -154,46 +154,205 @@
     margin-top: 2px;
   }
 
-  /* Location grid */
-  .location-grid {
+  /* Section rhythm overrides (home only) */
+  section.section-rhythm-tight {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  section.section-rhythm-tight-top {
+    padding-top: 32px;
+  }
+
+  section.section-rhythm-tight-bottom {
+    padding-bottom: 36px;
+  }
+
+  .section-header.section-header--compact {
+    margin-bottom: 40px;
+  }
+
+  /* Visual feature sections */
+  .feature-showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
-    max-width: 700px;
-    margin: 0 auto;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 28px;
+    align-items: center;
   }
 
-  .location-card {
-    text-align: center;
-    padding: 28px 20px;
+  .feature-copy-panel,
+  .feature-mosaic {
     background: white;
-    border-radius: 12px;
+    border-radius: 18px;
     border: 1px solid rgba(137,127,89,0.08);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
   }
 
-  .location-card:hover {
-    box-shadow: 0 4px 20px rgba(56,49,35,0.06);
+  .feature-copy-panel {
+    padding: 36px;
   }
 
-  .location-time {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
+  .feature-mosaic {
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 14px;
+    background: linear-gradient(180deg, rgba(245,240,232,0.92), rgba(255,255,255,0.92));
+  }
+
+  .feature-kicker {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     color: var(--copper);
+    margin-bottom: 14px;
+  }
+
+  .feature-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--brown-deep);
+    margin-bottom: 14px;
+  }
+
+  .feature-copy {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--brown-med);
+  }
+
+  .compact-points {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .compact-point {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: var(--cream-light);
+    border: 1px solid rgba(137,127,89,0.08);
+  }
+
+  .compact-point-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--copper);
+    min-width: 28px;
+  }
+
+  .compact-point-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
     margin-bottom: 4px;
   }
 
-  .location-name {
+  .compact-point-copy {
     font-size: 13px;
-    font-weight: 500;
-    color: var(--dark);
+    color: var(--brown-med);
+    line-height: 1.6;
   }
 
-  .location-sub {
+  .compact-points.compact-points--summary {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .compact-points.compact-points--summary .compact-point {
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .compact-points.compact-points--summary .compact-point-number {
+    font-size: 20px;
+    min-width: 28px;
+  }
+
+  .compact-points.compact-points--summary .compact-point-title {
+    display: inline;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .compact-points.compact-points--summary .compact-point-copy {
+    display: inline;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 6px;
+  }
+
+  .mosaic-lead {
+    position: relative;
+    min-height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .mosaic-lead img,
+  .mosaic-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .mosaic-stack {
+    display: grid;
+    gap: 14px;
+  }
+
+  .mosaic-card {
+    position: relative;
+    min-height: 242px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .mosaic-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 18px;
+    background: linear-gradient(180deg, transparent, rgba(42,31,20,0.82));
+    color: var(--cream);
+  }
+
+  .mosaic-label {
     font-size: 11px;
-    color: var(--brown-med);
-    margin-top: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.8);
+    margin-bottom: 4px;
+  }
+
+  .mosaic-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--cream);
+  }
+
+  .icon-pills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .icon-pill {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(245,240,232,0.75);
+    border: 1px solid rgba(137,127,89,0.12);
+    font-size: 12px;
+    color: var(--brown-deep);
+    text-align: center;
   }
 
   /* CTA banner */
@@ -232,6 +391,21 @@
 
   @media (max-width: 640px) {
     .highlights-grid { grid-template-columns: 1fr; }
+    section.section-rhythm-tight {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    section.section-rhythm-tight-top {
+      padding-top: 26px;
+    }
+    section.section-rhythm-tight-bottom {
+      padding-bottom: 28px;
+    }
+    .feature-showcase { grid-template-columns: 1fr; }
+    .feature-copy-panel { padding: 24px; }
+    .feature-mosaic { grid-template-columns: 1fr; }
+    .mosaic-lead, .mosaic-card { min-height: 220px; }
+    .icon-pills { grid-template-columns: 1fr; }
     .photo-break { height: 280px; }
     .cta-banner { padding: 48px 24px; margin: 0 16px 60px; }
   }
@@ -277,8 +451,8 @@
 </div>
 
 <!-- PROPERTY HIGHLIGHTS -->
-<section>
-  <div class="section-header fade-in">
+<section class="section-rhythm-tight-bottom">
+  <div class="section-header section-header--compact fade-in">
     <div class="section-tag">Your Mountain Retreat</div>
     <h2 class="section-title">Amenities & Experiences</h2>
     <div class="section-line"></div>
@@ -300,7 +474,7 @@
       </div>
       <div>
         <div class="highlight-name">Private Theater</div>
-        <div class="highlight-desc">80" screen with surround sound, theater-style popcorn machine, and a curated vinyl record collection.</div>
+        <div class="highlight-desc">Movie nights feel special here with theater seating, a popcorn machine, and a turntable with records for slower evenings in.</div>
       </div>
     </div>
     <div class="highlight-card fade-in">
@@ -309,7 +483,7 @@
       </div>
       <div>
         <div class="highlight-name">Arcade & Games</div>
-        <div class="highlight-desc">Four-player multi-arcade with 1400+ games, ping pong table, and endless entertainment for all ages.</div>
+        <div class="highlight-desc">Arcade, ping pong, foosball, air hockey, board games, and kid-friendly play spaces make the house a destination on its own.</div>
       </div>
     </div>
     <div class="highlight-card fade-in">
@@ -335,8 +509,81 @@
         <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <div>
-        <div class="highlight-name">Concierge Services</div>
-        <div class="highlight-desc">Private chef, grocery stocking, ski valet, transportation, and custom itineraries through Mountain Time Utah.</div>
+        <div class="highlight-name">Fully Equipped for Groups</div>
+        <div class="highlight-desc">Dining for a crowd, a kitchen ready for real meals, generous parking, keyless entry, and space that works for multigenerational stays.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY + GROUPS -->
+<section class="section-rhythm-tight section-rhythm-tight-top wide">
+  <div class="feature-showcase">
+    <div class="feature-copy-panel fade-in">
+      <div class="feature-kicker">Mountain Basecamp</div>
+      <h2 class="feature-title">Built for adventure, designed for everyone.</h2>
+      <div class="feature-kicker">Year-Round Adventure</div>
+      <p class="feature-copy">Every season has a story here. Heber Valley is not just a ski town. It is fly fishing on the Provo River, horseback riding through alpine meadows, mountain biking across 17,000 miles of trails, paddleboarding on Jordanelle at sunset, hot air balloon rides at sunrise, golden aspens on the Alpine Loop, snowmobiling through fresh powder, and three world-class ski resorts within 15 minutes. There is always a reason to come back.</p>
+
+      <div class="compact-points compact-points--summary">
+        <div class="compact-point">
+          <div class="compact-point-number">4</div>
+          <div>
+            <div class="compact-point-title">Bedrooms</div>
+            <div class="compact-point-copy">Three king suites plus a bunk room.</div>
+          </div>
+        </div>
+        <div class="compact-point">
+          <div class="compact-point-number">14</div>
+          <div>
+            <div class="compact-point-title">Guests total</div>
+            <div class="compact-point-copy">With 3.5 bathrooms, hot tub, and home theater.</div>
+          </div>
+        </div>
+        <div class="compact-point">
+          <div class="compact-point-number">8</div>
+          <div>
+            <div class="compact-point-title">min to Deer Valley</div>
+            <div class="compact-point-copy">Quick drive to the slopes.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-pills">
+        <div class="icon-pill">Skiing</div>
+        <div class="icon-pill">Fly fishing</div>
+        <div class="icon-pill">Horseback riding</div>
+        <div class="icon-pill">Mountain biking</div>
+        <div class="icon-pill">Hiking</div>
+        <div class="icon-pill">Hot air balloons</div>
+        <div class="icon-pill">Golf</div>
+        <div class="icon-pill">Snowmobiling</div>
+      </div>
+    </div>
+
+    <div class="feature-mosaic fade-in">
+      <div class="mosaic-lead">
+        <img src="images/gallery/bedroom1-1.jpg" alt="Primary bedroom with mountain view" loading="lazy">
+        <div class="mosaic-overlay">
+          <div class="mosaic-label">Primary Suite</div>
+          <div class="mosaic-title">Primary bedroom view</div>
+        </div>
+      </div>
+      <div class="mosaic-stack">
+        <div class="mosaic-card">
+          <img src="images/gallery/bedroom3-1.jpg" alt="Bunk room for kids and teens" loading="lazy">
+          <div class="mosaic-overlay">
+            <div class="mosaic-label">Bunk Room</div>
+            <div class="mosaic-title">Bunk room</div>
+          </div>
+        </div>
+        <div class="mosaic-card">
+          <img src="images/gallery/dining-1.jpg" alt="Dining table with mountain views" loading="lazy">
+          <div class="mosaic-overlay">
+            <div class="mosaic-label">Gathering Space</div>
+            <div class="mosaic-title">Dining room</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -346,9 +593,79 @@
 <div class="photo-break fade-in">
   <img src="images/photo-break-house.jpg" alt="Deer Valley Basecamp living room with fireplace and mountain views" loading="lazy">
   <div class="photo-break-overlay">
-    <div class="photo-break-text">Where Every Season Tells a Story</div>
+    <div class="photo-break-text">where every season is lived like home</div>
   </div>
 </div>
+
+<!-- SKI + STAY EXPERIENCE -->
+<section class="section-rhythm-tight section-rhythm-tight-top wide">
+  <div class="feature-showcase">
+    <div class="feature-mosaic fade-in">
+      <div class="mosaic-lead">
+        <img src="images/gallery/outdoor-hottub.jpg" alt="Outdoor hot tub at Deer Valley Basecamp" loading="lazy">
+        <div class="mosaic-overlay">
+          <div class="mosaic-label">After Ski</div>
+          <div class="mosaic-title">Outdoor hot tub</div>
+        </div>
+      </div>
+      <div class="mosaic-stack">
+        <div class="mosaic-card">
+          <img src="images/gallery/theater-2.jpg" alt="Theater room with popcorn machine" loading="lazy">
+          <div class="mosaic-overlay">
+            <div class="mosaic-label">At Home</div>
+            <div class="mosaic-title">Theater room</div>
+          </div>
+        </div>
+        <div class="mosaic-card">
+          <img src="images/gallery/gameroom-1.jpg" alt="Game room with foosball and ping pong" loading="lazy">
+          <div class="mosaic-overlay">
+            <div class="mosaic-label">For Everyone</div>
+            <div class="mosaic-title">Game room</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-copy-panel fade-in">
+      <div class="feature-kicker">Ski Convenience, Better Evenings</div>
+      <h2 class="feature-title">Close to Deer Valley, but with more personality than a typical ski condo.</h2>
+      <p class="feature-copy">The best ski trips are not just about the mountain. They are about what happens after. A place to spread out, warm up, and actually enjoy the evening together.</p>
+
+      <div class="compact-points">
+        <div class="compact-point">
+          <div class="compact-point-number">8</div>
+          <div>
+            <div class="compact-point-title">Minutes to Deer Valley East Village</div>
+            <div class="compact-point-copy">Quick ski access without giving up the comfort of a full home.</div>
+          </div>
+        </div>
+        <div class="compact-point">
+          <div class="compact-point-number">20</div>
+          <div>
+            <div class="compact-point-title">Minutes to Park City</div>
+            <div class="compact-point-copy">Easy dining, shopping, and apres options whenever you want them.</div>
+          </div>
+        </div>
+        <div class="compact-point">
+          <div class="compact-point-number">55</div>
+          <div>
+            <div class="compact-point-title">Minutes from SLC airport</div>
+            <div class="compact-point-copy">Simple logistics for long weekends, holiday travel, and out-of-town guests.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-pills">
+        <div class="icon-pill">Boot dryer</div>
+        <div class="icon-pill">Popcorn machine</div>
+        <div class="icon-pill">Turntable + records</div>
+        <div class="icon-pill">Board games + puzzles</div>
+        <div class="icon-pill">Telescope nights</div>
+        <div class="icon-pill">Barbecue + deck</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS PREVIEW -->
 <section>
@@ -360,52 +677,19 @@
   <div class="testimonials-grid">
     <div class="testimonial-card fade-in">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Absolutely stunning property! The hot tub under the stars was magical, and the kids loved the arcade. We'll be back every winter."</p>
-      <div class="testimonial-author">Sarah M.</div>
-      <div class="testimonial-platform">Airbnb · January 2026</div>
+      <p class="testimonial-text">"One of the best Airbnbs we've ever stayed at. Stunning mountain views, cozy design, and amenities you don't expect at this price. Vivian thought of everything. Don't hesitate, just book it!"</p>
+      <div class="testimonial-author">Rafael</div>
+      <div class="testimonial-platform">Airbnb · Feb 20-22, 2026</div>
     </div>
     <div class="testimonial-card fade-in">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Perfect location for our ski trip. The house is beautifully designed and the sauna after skiing was incredible. Highly recommend!"</p>
-      <div class="testimonial-author">James R.</div>
-      <div class="testimonial-platform">VRBO · February 2026</div>
-    </div>
-    <div class="testimonial-card fade-in">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"We came for a family reunion and it was perfect. Plenty of space, amazing amenities, and the views are breathtaking. 10/10."</p>
-      <div class="testimonial-author">Linda K.</div>
-      <div class="testimonial-platform">Booking.com · December 2025</div>
+      <p class="testimonial-text">"Our stay in Heber City was exceptional. The home is beautifully designed, impeccably clean, and extremely well organized. The hot tub, sauna, and fire pit create a private retreat atmosphere. We would absolutely return and highly recommend it."</p>
+      <div class="testimonial-author">Rodrigo</div>
+      <div class="testimonial-platform">Airbnb · Feb 24-25, 2026</div>
     </div>
   </div>
   <div style="text-align: center; margin-top: 40px;" class="fade-in">
     <a href="reviews.html" class="btn btn--dark-outline">Read All Reviews</a>
-  </div>
-</section>
-
-<!-- LOCATION -->
-<section>
-  <div class="section-header fade-in">
-    <div class="section-tag">Prime Location</div>
-    <h2 class="section-title">Minutes from Everything</h2>
-    <div class="section-line"></div>
-    <p class="section-desc">Nestled in Heber City with easy access to world-class skiing, dining, and outdoor adventures.</p>
-  </div>
-  <div class="location-grid">
-    <div class="location-card fade-in">
-      <div class="location-time">8 min</div>
-      <div class="location-name">Deer Valley Resort</div>
-      <div class="location-sub">World-class skiing</div>
-    </div>
-    <div class="location-card fade-in">
-      <div class="location-time">20 min</div>
-      <div class="location-name">Park City</div>
-      <div class="location-sub">Largest US ski resort</div>
-    </div>
-    <div class="location-card fade-in">
-      <div class="location-time">55 min</div>
-      <div class="location-name">SLC Airport</div>
-      <div class="location-sub">Easy access</div>
-    </div>
   </div>
 </section>
 
@@ -419,6 +703,7 @@
 
 <div id="site-footer"></div>
 
+<script src="js/site-config.js" defer></script>
 <script src="js/components.js" defer></script>
 <script src="js/animations.js" defer></script>
 </body>

@@ -62,6 +62,21 @@
   transform: translateY(-3px);
 }
 
+.platform-card.is-unavailable {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.platform-card.is-unavailable:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.platform-card.is-unavailable .platform-cta {
+  color: var(--brown-med);
+  border-bottom-color: rgba(137,127,89,0.2);
+}
+
 .platform-icon {
   font-size: 32px;
   margin-bottom: 16px;
@@ -156,6 +171,12 @@
 
 .form-error.active {
   display: block;
+}
+
+.form-error a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* ========== RESPONSIVE ========== */

@@ -1,6 +1,37 @@
 // Shared header and footer injection
 document.addEventListener('DOMContentLoaded', () => {
+  const config = window.SITE_CONFIG || {};
+  const contact = config.contact || {};
+  const booking = config.booking || {};
+  const listings = booking.listings || {};
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  function platformBadge(label, href) {
+    if (!href) {
+      return `<span class="footer-platform-badge footer-platform-badge--disabled">${label}</span>`;
+    }
+
+    return `<a href="${href}" class="footer-platform-badge" target="_blank" rel="noopener">${label}</a>`;
+  }
+
+  function applyListingLink(link) {
+    const key = link.dataset.listing;
+    const href = listings[key];
+    const cta = link.querySelector('.platform-cta');
+
+    if (href) {
+      link.href = href;
+      link.removeAttribute('aria-disabled');
+      link.classList.remove('is-unavailable');
+      if (cta) cta.textContent = link.dataset.availableCta || cta.textContent;
+      return;
+    }
+
+    link.removeAttribute('href');
+    link.setAttribute('aria-disabled', 'true');
+    link.classList.add('is-unavailable');
+    if (cta) cta.textContent = link.dataset.unavailableCta || 'Link coming soon';
+  }
 
   function isActive(page) {
     if (page === 'index.html' && (currentPage === 'index.html' || currentPage === '')) return true;
@@ -92,16 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>
             <div class="footer-col-title">Contact</div>
             <ul class="footer-links">
-              <li><a href="tel:+14355271971">(435) 527-1971</a></li>
-              <li><a href="mailto:info@deervalleybasecamp.com">Email Us</a></li>
+              <li><a href="tel:${contact.phone || '+14355271971'}">${contact.displayPhone || '(435) 527-1971'}</a></li>
+              <li><a href="mailto:${contact.email || 'info@deervalleybasecamp.com'}">Email Us</a></li>
             </ul>
           </div>
           <div>
             <div class="footer-col-title">Also On</div>
             <div class="footer-platforms">
-              <a href="#airbnb-listing" class="footer-platform-badge" target="_blank" rel="noopener">Airbnb</a>
-              <a href="#vrbo-listing" class="footer-platform-badge" target="_blank" rel="noopener">VRBO</a>
-              <a href="#booking-listing" class="footer-platform-badge" target="_blank" rel="noopener">Booking.com</a>
+              ${platformBadge('Airbnb', listings.airbnb)}
+              ${platformBadge('VRBO', listings.vrbo)}
+              ${platformBadge('Booking.com', listings.booking)}
             </div>
           </div>
         </div>
@@ -111,4 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </footer>
     `;
   }
+
+  document.querySelectorAll('[data-listing]').forEach(applyListingLink);
 });

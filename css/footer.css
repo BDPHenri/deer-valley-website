@@ -126,6 +126,11 @@
   background: rgba(245,240,232,0.1);
 }
 
+.footer-platform-badge--disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
 /* Bottom bar */
 .footer-bottom {
   max-width: var(--max-width);

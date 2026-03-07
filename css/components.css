@@ -27,6 +27,13 @@
   box-shadow: 0 8px 24px rgba(175,103,48,0.25);
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
 .btn--outline {
   background: transparent;
   color: var(--cream);

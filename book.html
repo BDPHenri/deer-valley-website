@@ -40,20 +40,15 @@
     <p class="section-desc">Select your dates below to check availability and book directly for the best rates.</p>
   </div>
   <div class="booking-widget-container">
-    <!-- HOSPITABLE WIDGET: Replace the URL below with your Hospitable widget URL -->
     <iframe
       id="booking-iframe"
       src="about:blank"
-      data-src="HOSPITABLE_WIDGET_URL_PLACEHOLDER"
       style="width: 100%; min-width: 320px; min-height: 900px; border: none;"
       title="Book Deer Valley Basecamp"
       loading="lazy"
     ></iframe>
     <div class="booking-widget-fallback">
-      <p>Widget loading... If it doesn't appear, <a href="#contact-form">use the contact form below</a> or book on
-        <a href="#airbnb-listing" target="_blank" rel="noopener">Airbnb</a> |
-        <a href="#vrbo-listing" target="_blank" rel="noopener">VRBO</a> |
-        <a href="#booking-listing" target="_blank" rel="noopener">Booking.com</a>
+      <p>Widget loading... If it doesn't appear, <a href="#contact-form">use the contact form below</a> for direct inquiries.
       </p>
     </div>
   </div>
@@ -69,22 +64,21 @@
 </section>
 
 <div class="platform-links">
-  <!-- UPDATE: Replace # with your actual listing URLs -->
-  <a href="#airbnb-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+  <a class="platform-card fade-in" data-listing="airbnb" data-available-cta="View Listing →" data-unavailable-cta="Airbnb link coming soon" target="_blank" rel="noopener">
     <div class="platform-icon">&#127968;</div>
     <div class="platform-name">Airbnb</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
     <div class="platform-count">Superhost</div>
     <div class="platform-cta">View Listing &rarr;</div>
   </a>
-  <a href="#vrbo-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+  <a class="platform-card fade-in" data-listing="vrbo" data-available-cta="View Listing →" data-unavailable-cta="VRBO link coming soon" target="_blank" rel="noopener">
     <div class="platform-icon">&#127956;</div>
     <div class="platform-name">VRBO</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
     <div class="platform-count">Premier Host</div>
     <div class="platform-cta">View Listing &rarr;</div>
   </a>
-  <a href="#booking-listing" class="platform-card fade-in" target="_blank" rel="noopener">
+  <a class="platform-card fade-in" data-listing="booking" data-available-cta="View Listing →" data-unavailable-cta="Booking.com link coming soon" target="_blank" rel="noopener">
     <div class="platform-icon">&#128205;</div>
     <div class="platform-name">Booking.com</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -102,53 +96,53 @@
     <p class="section-desc">Have questions or want to discuss a custom stay? We'd love to hear from you.</p>
   </div>
 
-  <!-- UPDATE: Replace FORM_ID_PLACEHOLDER with your Formspree form ID -->
-  <form id="booking-form" class="contact-form fade-in" action="https://formspree.io/f/FORM_ID_PLACEHOLDER" method="POST">
+  <form id="booking-form" class="contact-form fade-in" action="" method="POST">
     <div class="form-error"></div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label" for="name">Full Name</label>
-        <input class="form-input" type="text" id="name" name="name" required placeholder="Your name">
+    <div class="contact-form-fields">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com">
-      </div>
-    </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label" for="phone">Phone</label>
-        <input class="form-input" type="tel" id="phone" name="phone" placeholder="(Optional)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone</label>
+          <input class="form-input" type="tel" id="phone" name="phone" placeholder="(Optional)">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="guests">Number of Guests</label>
+          <input class="form-input" type="number" id="guests" name="guests" min="1" max="14" placeholder="1-14">
+        </div>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="guests">Number of Guests</label>
-        <input class="form-input" type="number" id="guests" name="guests" min="1" max="14" placeholder="1-14">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="checkin">Check-in Date</label>
+          <input class="form-input" type="date" id="checkin" name="checkin">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="checkout">Check-out Date</label>
+          <input class="form-input" type="date" id="checkout" name="checkout">
+        </div>
       </div>
-    </div>
 
-    <div class="form-row">
       <div class="form-group">
-        <label class="form-label" for="checkin">Check-in Date</label>
-        <input class="form-input" type="date" id="checkin" name="checkin">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-textarea" id="message" name="message" required placeholder="Tell us about your trip plans..."></textarea>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="checkout">Check-out Date</label>
-        <input class="form-input" type="date" id="checkout" name="checkout">
+
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div style="text-align: center; margin-top: 8px;">
+        <button type="submit" class="btn btn--primary" style="width: 100%; max-width: 300px;">Send Inquiry</button>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label" for="message">Message</label>
-      <textarea class="form-textarea" id="message" name="message" required placeholder="Tell us about your trip plans..."></textarea>
-    </div>
-
-    <!-- Honeypot for spam prevention -->
-    <input type="text" name="_gotcha" style="display:none">
-
-    <div style="text-align: center; margin-top: 8px;">
-      <button type="submit" class="btn btn--primary" style="width: 100%; max-width: 300px;">Send Inquiry</button>
     </div>
 
     <div class="form-success">
@@ -161,6 +155,7 @@
 
 <div id="site-footer"></div>
 
+<script src="js/site-config.js" defer></script>
 <script src="js/components.js" defer></script>
 <script src="js/animations.js" defer></script>
 <script src="js/booking.js" defer></script>

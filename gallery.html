@@ -7,7 +7,7 @@
 <meta name="description" content="Explore every corner of Deer Valley Basecamp. Photo gallery of our luxury mountain retreat in Heber City, Utah.">
 <meta property="og:title" content="Gallery — Deer Valley Basecamp">
 <meta property="og:description" content="Explore every corner of our luxury mountain retreat.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="images/hero-bg.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/layout.css">
@@ -35,42 +35,226 @@
 <section style="padding-bottom: 0;">
   <div class="category-tabs gallery-tabs fade-in">
     <button class="cat-tab active" data-category="all">All</button>
-    <button class="cat-tab" data-category="exterior">Exterior</button>
-    <button class="cat-tab" data-category="living">Living Spaces</button>
+    <button class="cat-tab" data-category="living">Living Room</button>
+    <button class="cat-tab" data-category="kitchen">Kitchen & Dining</button>
     <button class="cat-tab" data-category="bedrooms">Bedrooms</button>
-    <button class="cat-tab" data-category="kitchen">Kitchen</button>
+    <button class="cat-tab" data-category="bathrooms">Bathrooms</button>
     <button class="cat-tab" data-category="entertainment">Entertainment</button>
-    <button class="cat-tab" data-category="views">Views</button>
+    <button class="cat-tab" data-category="outdoor">Outdoor</button>
   </div>
 </section>
 
 <!-- PHOTO GRID -->
-<!-- ADD NEW PHOTOS: Copy a gallery-item div and update src, alt, and data-category -->
 <div class="gallery-grid">
-  <div class="gallery-item gallery-item--wide fade-in" data-category="exterior">
-    <img src="images/hero.jpg" alt="Deer Valley Basecamp exterior with mountain views" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Mountain retreat exterior</span></div>
-  </div>
-  <div class="gallery-item fade-in" data-category="views">
-    <img src="images/photo-break.jpg" alt="Mountain views from the property" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Stunning mountain panorama</span></div>
+
+  <!-- LIVING ROOM (6) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="living">
+    <img src="images/gallery/living-2.jpg" alt="Living room with stone fireplace, TV and mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Stone fireplace & mountain views</span></div>
   </div>
   <div class="gallery-item fade-in" data-category="living">
-    <img src="images/hero.jpg" alt="Living room" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Spacious living area</span></div>
+    <img src="images/gallery/living-1.jpg" alt="Sofa with panoramic mountain views through windows" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Panoramic mountain views</span></div>
   </div>
-  <div class="gallery-item gallery-item--tall fade-in" data-category="exterior">
-    <img src="images/photo-break.jpg" alt="Property entrance" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Welcome to Basecamp</span></div>
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/gallery/living-3.jpg" alt="Stone fireplace with mountain view windows" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Fireplace & valley views</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/gallery/living-4.jpg" alt="Stone fireplace centered with TV and cozy seating" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Cozy living area</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/gallery/living-5.jpg" alt="Living room with staircase and entry" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Open concept living</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/gallery/living-6.jpg" alt="Open concept view toward kitchen and stairs" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Living room to kitchen</span></div>
+  </div>
+
+  <!-- KITCHEN (5) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="kitchen">
+    <img src="images/gallery/kitchen-1.jpg" alt="Kitchen island with bar stools, dining nook and mountain view" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Gourmet kitchen with island</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/kitchen-2.jpg" alt="Quartz island with charcuterie and pendant lights" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Quartz countertop island</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/kitchen-3.jpg" alt="Kitchen island, wood hood and stainless appliances" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Wood hood & stainless appliances</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/kitchen-4.jpg" alt="Kitchen toward dining nook with mountain panorama" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Kitchen & dining nook</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/kitchen-5.jpg" alt="Kitchen island toward living room and stone fireplace" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Open concept kitchen</span></div>
+  </div>
+
+  <!-- DINING ROOM (3) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="kitchen">
+    <img src="images/gallery/dining-1.jpg" alt="Dining table set for 8 with banquette and mountain view" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Dining for 8 with mountain views</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/dining-2.jpg" alt="Close-up dining table with valley panorama" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Valley views from dining</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="kitchen">
+    <img src="images/gallery/dining-3.jpg" alt="Dining nook toward kitchen open concept" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Dining nook & kitchen</span></div>
+  </div>
+
+  <!-- BEDROOM 1 - PRIMARY (5) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom1-2.jpg" alt="Primary bedroom with floral wallpaper and rattan headboard" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Primary Bedroom</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom1-1.jpg" alt="Primary bedroom wide view with botanical wallpaper" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Primary Suite</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom1-3.jpg" alt="Primary bedroom kids nook with tipi" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Kids' nook with tipi</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom1-4.jpg" alt="Primary bedroom with en suite entry and mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">En suite & play area</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom1-5.jpg" alt="Mountain view from primary bedroom window" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Mountain views from bed</span></div>
+  </div>
+
+  <!-- PRIMARY EN SUITE (5) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="bathrooms">
+    <img src="images/gallery/ensuite-4.jpg" alt="Soaking tub with mountain views and marble tile" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Soaking tub with mountain views</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/ensuite-1.jpg" alt="Primary en suite overview with bedroom entry" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Primary en suite</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/ensuite-2.jpg" alt="Marble vanity with glass shower and walk-in closet" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Marble vanity & glass shower</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/ensuite-3.jpg" alt="En suite vanity with bedroom view through doorway" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Vanity & bedroom view</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/ensuite-5.jpg" alt="Bathroom window with valley and mountain panorama" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Mountain panorama from bath</span></div>
+  </div>
+
+  <!-- BEDROOM 2 (4) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom2-1.jpg" alt="Bedroom 2 with dark geometric wallpaper and gray headboard" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bedroom 2</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom2-2.jpg" alt="Bedroom 2 detail with macrame and decor" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bedroom 2 details</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom2-3.jpg" alt="Bedroom 2 another angle" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Cozy retreat</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom2-4.jpg" alt="Bedroom 2 window view" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bedroom 2 view</span></div>
+  </div>
+
+  <!-- BEDROOM 3 (2) -->
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom3-1.jpg" alt="Bedroom 3 bunk beds with botanical wallpaper" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bunk room</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom3-2.jpg" alt="Bedroom 3 bunk beds detail" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bunk room details</span></div>
+  </div>
+
+  <!-- BEDROOM 4 (4) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom4-1.jpg" alt="Bedroom 4 with grasscloth wallpaper and leather headboard" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bedroom 4</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom4-2.jpg" alt="Bedroom 4 detail" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Bedroom 4 details</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom4-3.jpg" alt="Bedroom 4 mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Mountain views</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bedrooms">
+    <img src="images/gallery/bedroom4-4.jpg" alt="Bedroom 4 window view" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Valley views from bed</span></div>
+  </div>
+
+  <!-- HALF BATH (2) -->
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/half-bath-1.jpg" alt="Half bath with modern fixtures" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Powder room</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/half-bath-2.jpg" alt="Half bath detail" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Powder room details</span></div>
+  </div>
+
+  <!-- FULL BATHROOM (1) -->
+  <div class="gallery-item fade-in" data-category="bathrooms">
+    <img src="images/gallery/bathroom-full.jpg" alt="Full bathroom with tub shower combo and landscape art" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Full bathroom</span></div>
+  </div>
+
+  <!-- THEATER ROOM (3) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="entertainment">
+    <img src="images/gallery/theater-1.jpg" alt="Theater room with leather sofa, large TV and balcony view" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Theater room</span></div>
   </div>
   <div class="gallery-item fade-in" data-category="entertainment">
-    <img src="images/hero.jpg" alt="Entertainment area" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Arcade & games room</span></div>
+    <img src="images/gallery/theater-2.jpg" alt="Theater room with popcorn machine and record player" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Popcorn machine & vinyl</span></div>
   </div>
-  <div class="gallery-item fade-in" data-category="views">
-    <img src="images/photo-break.jpg" alt="Deck views" loading="lazy">
-    <div class="gallery-overlay"><span class="gallery-caption">Views from the deck</span></div>
+  <div class="gallery-item fade-in" data-category="entertainment">
+    <img src="images/gallery/theater-3.jpg" alt="Theater room lounge area with horse art" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Theater lounge</span></div>
   </div>
+
+  <!-- GAME ROOM (2) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="entertainment">
+    <img src="images/gallery/gameroom-1.jpg" alt="Game room with Heber City mural, foosball and ping pong" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Game room</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="entertainment">
+    <img src="images/gallery/gameroom-2.jpg" alt="Game room arcade and games" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Arcade & games</span></div>
+  </div>
+
+  <!-- OUTDOOR (2) -->
+  <div class="gallery-item gallery-item--wide fade-in" data-category="outdoor">
+    <img src="images/gallery/outdoor-deck.jpg" alt="Deck with fire pit and mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Deck with fire pit</span></div>
+  </div>
+  <div class="gallery-item fade-in" data-category="outdoor">
+    <img src="images/gallery/outdoor-hottub.jpg" alt="Hot tub with mountain views" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Hot tub & mountain views</span></div>
+  </div>
+
+  <!-- LAUNDRY (1) -->
+  <div class="gallery-item fade-in" data-category="living">
+    <img src="images/gallery/laundry.jpg" alt="LG washer and dryer with supplies" loading="lazy">
+    <div class="gallery-overlay"><span class="gallery-caption">Laundry</span></div>
+  </div>
+
 </div>
 
 <!-- LIGHTBOX -->

@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="nav-links" id="nav-links">
             <a href="index.html" class="nav-link ${activeClass('index.html')}">Home</a>
             <a href="gallery.html" class="nav-link ${activeClass('gallery.html')}">Gallery</a>
-            <a href="guide.html" class="nav-link ${activeClass('guide.html')}">Guide</a>
             <a href="reviews.html" class="nav-link ${activeClass('reviews.html')}">Reviews</a>
             <a href="book.html" class="nav-cta">Book Now</a>
           </div>
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="guide.html">Guest Guide</a></li>
+
               <li><a href="reviews.html">Reviews</a></li>
               <li><a href="book.html">Book Now</a></li>
             </ul>

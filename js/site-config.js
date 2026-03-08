@@ -5,10 +5,10 @@ window.SITE_CONFIG = {
     email: 'info@deervalleybasecamp.com'
   },
   booking: {
-    widgetUrl: '',
+    widgetUrl: 'https://booking.hospitable.com/widget/a13e8069-0d70-4aa1-85a1-db4772df5ca9/2176332',
     formEndpoint: '',
     listings: {
-      airbnb: '',
+      airbnb: 'https://www.airbnb.com/rooms/1576934474821706460',
       vrbo: '',
       booking: ''
     }

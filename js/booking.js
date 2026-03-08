@@ -4,25 +4,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const contact = config.contact || {};
   const form = document.getElementById('booking-form');
   const iframe = document.getElementById('booking-iframe');
+  const embedWrap = document.getElementById('booking-embed-wrap');
+  const directLink = document.getElementById('booking-direct-link');
+  const directNote = document.getElementById('booking-direct-note');
+  const fallbackLink = document.getElementById('booking-fallback-link');
   const fallback = document.querySelector('.booking-widget-fallback');
-  const directEmail = contact.email || 'info@deervalleybasecamp.com';
+  const directEmail = contact.email || 'vivian@docelarhomes.com';
   const directPhone = contact.displayPhone || '(435) 527-1971';
 
-  if (iframe) {
-    if (bookingConfig.widgetUrl) {
-      iframe.src = bookingConfig.widgetUrl;
-    } else {
-      iframe.hidden = true;
-      if (fallback) {
-        fallback.innerHTML = `
-          <p>
-            Direct booking will be available here soon. For now, use the inquiry form below
-            or contact us at <a href="mailto:${directEmail}">${directEmail}</a> /
-            <a href="tel:${contact.phone || '+14355271971'}">${directPhone}</a>.
-          </p>
-        `;
-      }
+  if (bookingConfig.widgetUrl) {
+    if (directLink) directLink.href = bookingConfig.widgetUrl;
+    if (fallbackLink) fallbackLink.href = bookingConfig.widgetUrl;
+    if (iframe) iframe.src = bookingConfig.widgetUrl;
+    if (embedWrap) embedWrap.hidden = false;
+  } else {
+    if (directLink) {
+      directLink.href = '#contact-form';
+      directLink.removeAttribute('target');
+      directLink.removeAttribute('rel');
+      directLink.textContent = 'Use Contact Form';
     }
+    if (directNote) {
+      directNote.innerHTML = `
+        Secure checkout link not configured yet. For now, contact us at
+        <a href="mailto:${directEmail}">${directEmail}</a> /
+        <a href="tel:${contact.phone || '+14355271971'}">${directPhone}</a>.
+      `;
+    }
+    if (embedWrap) embedWrap.hidden = true;
+  }
+
+  if (iframe && fallback) {
+    fallback.innerHTML = `
+      <p>
+        If the calendar does not appear, <a href="${bookingConfig.widgetUrl || '#contact-form'}" ${bookingConfig.widgetUrl ? 'target="_blank" rel="noopener"' : ''}>open secure booking</a>
+        or use the inquiry form below.
+      </p>
+    `;
   }
 
   if (!form) return;

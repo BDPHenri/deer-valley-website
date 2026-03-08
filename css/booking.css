@@ -5,6 +5,57 @@
   margin: 0 auto;
 }
 
+.booking-direct-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(137,127,89,0.1);
+  box-shadow: var(--shadow-md);
+  padding: 34px;
+  text-align: left;
+}
+
+.booking-direct-badge {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--copper);
+  background: var(--cream-light);
+  border: 1px solid rgba(175,103,48,0.15);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.booking-direct-title {
+  margin-top: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--brown-deep);
+}
+
+.booking-direct-copy {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--brown-med);
+  max-width: 700px;
+}
+
+.booking-direct-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.booking-direct-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--brown-med);
+}
+
 .booking-widget-container {
   background: var(--white);
   border-radius: var(--radius-xl);
@@ -13,10 +64,17 @@
   box-shadow: var(--shadow-md);
 }
 
+.booking-widget-container--embed {
+  margin-top: 18px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .booking-widget-container iframe {
   width: 100%;
   min-width: 320px;
-  min-height: 900px;
+  min-height: 860px;
   border: none;
   display: block;
 }
@@ -181,6 +239,23 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .booking-direct-card {
+    padding: 24px;
+  }
+
+  .booking-direct-actions {
+    flex-direction: column;
+  }
+
+  .booking-direct-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .booking-widget-container--embed {
+    max-width: 100%;
+  }
+
   .platform-links {
     grid-template-columns: 1fr;
     max-width: 400px;

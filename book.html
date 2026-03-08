@@ -37,9 +37,20 @@
     <div class="section-tag">Direct Booking</div>
     <h2 class="section-title">Check Availability</h2>
     <div class="section-line"></div>
-    <p class="section-desc">Select your dates below to check availability and book directly for the best rates.</p>
+    <p class="section-desc">The calendar loads right away. Pick your dates and start your booking instantly.</p>
   </div>
-  <div class="booking-widget-container">
+
+  <div class="booking-direct-card">
+    <div class="booking-direct-badge">Powered by Hospitable</div>
+    <h3 class="booking-direct-title">Reserve Direct, Right Here</h3>
+    <p class="booking-direct-copy">Use the calendar below to start immediately. If you prefer, you can continue in full-screen secure checkout.</p>
+    <div class="booking-direct-actions">
+      <a id="booking-direct-link" class="btn btn--dark-outline" href="#" target="_blank" rel="noopener">Open Full-Screen Checkout</a>
+    </div>
+    <p class="booking-direct-note" id="booking-direct-note">Calendar is already loaded below for the fastest booking flow.</p>
+  </div>
+
+  <div class="booking-widget-container booking-widget-container--embed" id="booking-embed-wrap">
     <iframe
       id="booking-iframe"
       src="about:blank"
@@ -48,7 +59,7 @@
       loading="lazy"
     ></iframe>
     <div class="booking-widget-fallback">
-      <p>Widget loading... If it doesn't appear, <a href="#contact-form">use the contact form below</a> for direct inquiries.
+      <p>If the calendar does not load, <a id="booking-fallback-link" href="#contact-form">open secure booking</a> or use the contact form below.
       </p>
     </div>
   </div>

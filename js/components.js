@@ -121,10 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
           </div>
           <div>
-            <div class="footer-col-title">Contact</div>
+            <div class="footer-col-title">Email</div>
             <ul class="footer-links">
-              <li><a href="tel:${contact.phone || '+14355271971'}">${contact.displayPhone || '(435) 527-1971'}</a></li>
-              <li><a href="mailto:${contact.email || 'info@deervalleybasecamp.com'}">Email Us</a></li>
+              <li><a href="mailto:${contact.email || 'vivian@docelarhomes.com'}">${contact.email || 'vivian@docelarhomes.com'}</a></li>
             </ul>
           </div>
           <div>

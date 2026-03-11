@@ -131,10 +131,8 @@
 <script src="js/components.js" defer></script>
 <script src="js/animations.js" defer></script>
 <script>
-  // Configure your public feed endpoint here (leave empty to use local fallback data).
-  // Example:
-  // window.DEER_VALLEY_REVIEWS_FEED_URL = 'https://<project>.functions.supabase.co/public-reviews?listing=deer-valley-basecamp';
-  window.DEER_VALLEY_REVIEWS_FEED_URL = '';
+  // Public reviews feed via Supabase PostgREST (RLS allows public read of published reviews)
+  window.DEER_VALLEY_REVIEWS_FEED_URL = 'https://cvmgylogeanxwtijhzpo.supabase.co/rest/v1/public_reviews?published=eq.true&listing_slug=eq.deer-valley-basecamp&order=review_date.desc&apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN2bWd5bG9nZWFueHd0aWpoenBvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5NjIwNTMsImV4cCI6MjA4NjUzODA1M30.ncO8OJUi--Ki33PPMDoecLXksIZf_WfZeFR7enXuGYA';
 </script>
 <script src="js/reviews.js" defer></script>
 </body>

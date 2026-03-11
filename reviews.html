@@ -65,9 +65,9 @@
 <!-- RATING BANNER -->
 <div class="rating-banner fade-in">
   <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  <div class="rating-score">5.0</div>
+  <div class="rating-score" id="rating-score">—</div>
   <div class="rating-label">Exceptional</div>
-  <div class="rating-count">Across 2 verified Airbnb reviews</div>
+  <div class="rating-count" id="rating-count">Connect your review feed to display real guest feedback.</div>
 </div>
 
 <!-- FILTER TABS -->
@@ -75,37 +75,14 @@
   <div class="category-tabs reviews-tabs fade-in">
     <button class="cat-tab active" data-platform="all">All</button>
     <button class="cat-tab" data-platform="airbnb">Airbnb</button>
+    <button class="cat-tab" data-platform="vrbo">VRBO</button>
+    <button class="cat-tab" data-platform="booking">Booking.com</button>
   </div>
 </section>
 
 <!-- REVIEWS GRID -->
-<div class="reviews-grid" id="reviews-grid">
-  <div class="review-card fade-in" data-platform="airbnb">
-    <div class="review-header">
-      <div class="review-avatar">RA</div>
-      <div class="review-info">
-        <div class="review-name">Rafael</div>
-        <div class="review-date">February 20-22, 2026 · 2 nights</div>
-      </div>
-      <div class="review-platform-badge">Airbnb</div>
-    </div>
-    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="review-text">"One of the best Airbnbs we've ever stayed at. Stunning mountain views, cozy design, and amenities you don't expect at this price. Vivian thought of everything. Don't hesitate, just book it!"</p>
-  </div>
-
-  <div class="review-card fade-in" data-platform="airbnb">
-    <div class="review-header">
-      <div class="review-avatar">RO</div>
-      <div class="review-info">
-        <div class="review-name">Rodrigo</div>
-        <div class="review-date">February 24-25, 2026 · 1 night</div>
-      </div>
-      <div class="review-platform-badge">Airbnb</div>
-    </div>
-    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="review-text">"Our stay in Heber City was exceptional. The home is beautifully designed, impeccably clean, and extremely well organized - every detail reflects thoughtful care. The amenities truly elevate the experience. The hot tub, sauna, and especially the fire pit create a private, luxury retreat atmosphere. The house is fully stocked with high-quality essentials, making the stay effortless and comfortable. The host was professional, responsive, and genuinely attentive throughout our stay. This property delivers exactly what it promises - comfort, quality, and a refined experience. We would absolutely return and highly recommend it."</p>
-  </div>
-</div>
+<div class="reviews-grid" id="reviews-grid" aria-live="polite"></div>
+<div class="reviews-status" id="reviews-status">Loading live reviews...</div>
 
 <!-- PLATFORM CTAs -->
 <section>
@@ -121,21 +98,21 @@
     <div class="platform-icon">&#127968;</div>
     <div class="platform-name">Airbnb</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="platform-count">2 Verified Reviews</div>
+    <div class="platform-count"><span id="platform-count-airbnb">0</span> Reviews</div>
     <div class="platform-cta">Read on Airbnb &rarr;</div>
   </a>
   <a class="platform-card fade-in is-unavailable" data-listing="vrbo" data-available-cta="Read on VRBO →" data-unavailable-cta="VRBO reviews link coming soon" target="_blank" rel="noopener" aria-disabled="true">
     <div class="platform-icon">&#127956;</div>
     <div class="platform-name">VRBO</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="platform-count">Reviews coming soon</div>
+    <div class="platform-count"><span id="platform-count-vrbo">0</span> Reviews</div>
     <div class="platform-cta">Read on VRBO &rarr;</div>
   </a>
   <a class="platform-card fade-in is-unavailable" data-listing="booking" data-available-cta="Read on Booking.com →" data-unavailable-cta="Booking.com reviews link coming soon" target="_blank" rel="noopener" aria-disabled="true">
     <div class="platform-icon">&#128205;</div>
     <div class="platform-name">Booking.com</div>
     <div class="platform-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="platform-count">Reviews coming soon</div>
+    <div class="platform-count"><span id="platform-count-booking">0</span> Reviews</div>
     <div class="platform-cta">Read on Booking.com &rarr;</div>
   </a>
 </div>
@@ -154,29 +131,11 @@
 <script src="js/components.js" defer></script>
 <script src="js/animations.js" defer></script>
 <script>
-// Reviews platform filter
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelectorAll('.reviews-tabs .cat-tab');
-  const cards = document.querySelectorAll('.review-card');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const platform = tab.dataset.platform;
-      cards.forEach(card => {
-        if (platform === 'all' || card.dataset.platform === platform) {
-          card.style.display = '';
-          card.classList.remove('visible');
-          setTimeout(() => card.classList.add('visible'), 50);
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-});
+  // Configure your public feed endpoint here (leave empty to use local fallback data).
+  // Example:
+  // window.DEER_VALLEY_REVIEWS_FEED_URL = 'https://<project>.functions.supabase.co/public-reviews?listing=deer-valley-basecamp';
+  window.DEER_VALLEY_REVIEWS_FEED_URL = '';
 </script>
+<script src="js/reviews.js" defer></script>
 </body>
 </html>

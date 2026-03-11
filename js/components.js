@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="footer-inner">
           <div class="footer-brand">
             <div class="footer-logo-img">
-              <img src="images/logo.png" alt="Deer Valley Basecamp">
+              <img src="images/logo.png" alt="Deer Valley Basecamp" class="footer-logo-art">
             </div>
             <div class="footer-logo">Deer Valley Basecamp</div>
             <div class="footer-tagline">Heber City, Utah · Mountain Retreat</div>

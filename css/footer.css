@@ -23,31 +23,30 @@
   height: 124px;
   margin-bottom: 18px;
   position: relative;
-  isolation: isolate;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f2ea 100%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .footer-logo-img::before {
-  content: "";
-  position: absolute;
-  inset: -16px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 45% 48%, rgba(161, 193, 199, 0.22) 0%, rgba(161, 193, 199, 0.12) 26%, rgba(161, 193, 199, 0.03) 46%, transparent 68%),
-    radial-gradient(circle at 50% 54%, rgba(82, 51, 32, 0.12) 0%, rgba(82, 51, 32, 0.58) 65%, rgba(82, 51, 32, 0) 88%);
-  filter: blur(6px);
-  z-index: 0;
+  content: none;
 }
 
 .footer-logo-img img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+  width: 92%;
+  height: 92%;
   object-fit: contain;
-  opacity: 0.96;
-  mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 44%, rgba(0,0,0,0.94) 60%, rgba(0,0,0,0.72) 74%, rgba(0,0,0,0.28) 88%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 44%, rgba(0,0,0,0.94) 60%, rgba(0,0,0,0.72) 74%, rgba(0,0,0,0.28) 88%, rgba(0,0,0,0) 100%);
+  opacity: 1;
+  mix-blend-mode: normal;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .footer-logo-art {

@@ -1,0 +1,17 @@
+name: Trigger Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger docelarhomes-website deploy
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/BDPHenri/docelarhomes-website/dispatches \
+            -d '{"event_type":"deploy","client_payload":{"source":"deer-valley-website"}}'
